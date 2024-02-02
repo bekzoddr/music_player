@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player Code</title>
+    <link
+      rel="icon"
+      href="../images/billie eilish/Screenshot-2024-01-31-213241.svg"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="../../index.html">
+          <img
+            src="../images/billie eilish/Screenshot-2024-01-31-213241.svg"
+            alt="Logo Image"
+            class="logo__light" />
+          <img src="../images/logo.dark.svg" alt="" class="logo__dark"
+        /></a>
+      </div>
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <label class="container">
+          <input type="checkbox" id="toggle" class="switch" />
+          <span class="slider round">
+            <div class="background"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </span>
+        </label>
+      </ul>
+    </nav>
+    <i class="fa-solid fa-backward"></i>
+    <div class="player">
+      <div class="player__header">
+        <div class="player__img player__img--absolute slider">
+          <button class="player__button player__button--absolute--nw playlist">
+            <img
+              style="width: 60px; height: 60px"
+              src="../images/photo_2024-01-30_23-02-38_prev_ui.png"
+              alt="playlist-icon"
+            />
+          </button>
+          <button class="player__button player__button--absolute--center play">
+            <img
+              style="
+                width: 60px;
+                height: 60px;
+                position: relative;
+                bottom: 5px;
+                right: 5px;
+              "
+              src="../images/play (1).svg"
+              alt="play-icon"
+            />
+            <img src="../images/pause.svg" alt="pause-icon" />
+          </button>
+          <div class="slider__content">
+            <img
+              class="img slider__img"
+              src="../images/billie eilish/billie eilish.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="../images/billie eilish/billie eilish2.webp"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="../images/billie eilish/billie eilish3.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="../images/billie eilish/billie eilish.4.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="../images/billie eilish/billie eilish.5.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="../images/billie eilish/billie eilish.6.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="../images/family affair.webp"
+              alt="cover"
+            />
+          </div>
+        </div>
+        <div class="player__controls">
+          <button class="player__button back">
+            <img class="img" src="../images/back.svg" alt="back-icon" />
+          </button>
+          <p class="player__context slider__context">
+            <strong class="slider__name"></strong>
+            <span class="player__title slider__title"></span>
+          </p>
+          <button class="player__button next">
+            <img class="img" src="../images/next.svg" alt="next-icon" />
+          </button>
+          <div class="progres">
+            <div class="progres__filled"></div>
+          </div>
+        </div>
+      </div>
+      <ul class="player__playlist list">
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="../images/billie eilish/billie eilish.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">Lovely</b>
+            <span class="flex">
+              <span class="player__title">Billie Eilish</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="../audio/billie eilish/billie Eilish lovely.m4a"
+          ></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="../images/billie eilish/billie eilish2.webp"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">Everything I wanted</b>
+            <span class="flex">
+              <span class="player__title">Billie Eilish</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="../audio/billie eilish/billie Eilish Everything i wanted.m4a"
+          ></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="../images/billie eilish/billie eilish3.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">TV📺</b>
+            <span class="flex">
+              <span class="player__title">Billie Eilish</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio class="audio" src="../audio/billie eilish/tv.m4a"></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="../images/billie eilish/billie eilish.4.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">Bellyache</b>
+            <span class="flex">
+              <span class="player__title">Billie Eilish</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="../audio/billie eilish/bellyache.m4a"
+          ></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="../images/billie eilish/billie eilish.5.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">Bad guy😋</b>
+            <span class="flex">
+              <span class="player__title">Billie Eilish</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio class="audio" src="../audio/billie eilish/bad guy.m4a"></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="../images/billie eilish/billie eilish.6.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">Hotline Bling</b>
+            <span class="flex">
+              <span class="player__title">Billie Eilish</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="../audio/billie eilish/Hotline Bling.m4a"
+          ></audio>
+        </li>
+      </ul>
+    </div>
+    <script src="../app.js"></script>
+
+    <script src="../../js/main.js"></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const links = document.querySelectorAll(".nav-links li");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        links.forEach((link) => {
+          link.classList.toggle("fade");
+        });
+      });
+    </script>
+  </body>
+</html>

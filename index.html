@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My music player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/logos/Screenshot 2024-01-31 212818.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- <div id="loader">
+      <div class="loader">
+        <div class="e-loadholder">
+          <div class="m-loader">
+            <span class="e-text">Loading</span>
+          </div>
+        </div>
+        <div id="particleCanvas-Blue"></div>
+        <div id="particleCanvas-White"></div>
+      </div>
+    </div> -->
+    <nav>
+      <div class="logo">
+        <a href="#">
+          <img
+            src="music/images/billie eilish/Screenshot-2024-01-31-213241.svg"
+            alt="Logo Image" class="logo__light"
+        />
+      <img src="music/images/logo.dark.svg" alt="" class="logo__dark"></a>
+      </div>
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <label class="container">
+          <input type="checkbox" id="toggle" class="switch" />
+          <span class="slider round">
+            <div class="background"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </span>
+        </label>
+      </ul>
+    </nav>
+    <div class="content">
+      <h1 class="heading">Responsive image gallery</h1>
+      <div class="gallery">
+        <a href="music/pages/billie-eilish.html">
+          <figure
+            class="galleryItem"
+            data-aos="flip-left"
+            data-aos-once="false"
+          >
+            <a href="music/pages/billie-eilish.html"
+              ><img
+                class="pc"
+                src="music/images/billie eilish/billie eilish.4.jpg"
+                alt="Man with facial tattoo"
+            /></a>
+            <figcaption>Billie Eilish</figcaption>
+          </figure>
+        </a>
+        <figure class="galleryItem" data-aos="flip-left" data-aos-once="false">
+          <a href="#"
+            ><img
+              src="images/photo_2021-08-28_14-50-13.jpg"
+              alt="Man with facial tattoo"
+          /></a>
+          <figcaption>Man with facial tattoo</figcaption>
+        </figure>
+        <figure class="galleryItem" data-aos="flip-right" data-aos-once="false">
+          <a href="#"
+            ><img src="images/photo_2021-09-13_13-06-20.jpg" alt="Leasure"
+          /></a>
+          <figcaption>Leasure</figcaption>
+        </figure>
+        <figure class="galleryItem" data-aos="flip-left" data-aos-once="false">
+          <a href="#"
+            ><img
+              src="images/photo_2023-09-14_22-18-12.jpg"
+              alt="Pretty colors"
+          /></a>
+          <figcaption>Pretty colors</figcaption>
+        </figure>
+        <figure class="galleryItem" data-aos="flip-right" data-aos-once="false">
+          <a href="#"
+            ><img src="images/photo_2023-09-14_22-19-07.jpg" alt="Architecture"
+          /></a>
+          <figcaption>Architecture</figcaption>
+        </figure>
+        <figure class="galleryItem" data-aos="flip-left" data-aos-once="false">
+          <a href="#"
+            ><img src="images/photo_2023-09-14_22-19-38.jpg" alt="Beach"
+          /></a>
+          <figcaption>Beach</figcaption>
+        </figure>
+        <figure class="galleryItem" data-aos="flip-right" data-aos-once="false">
+          <a href="#"
+            ><img
+              src="https://images.unsplash.com/photo-1519405530001-3b5e82ba4dac?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+              alt="Mountains"
+          /></a>
+          <figcaption>Mountains</figcaption>
+        </figure>
+        <figure class="galleryItem" data-aos="flip-left" data-aos-once="false">
+          <a href="#"
+            ><img
+              src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+              alt="Starry sky"
+          /></a>
+          <figcaption>Starry sky</figcaption>
+        </figure>
+        <figure class="galleryItem" data-aos="flip-right" data-aos-once="false">
+          <a href="#"
+            ><img
+              src="https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+              alt="Forest"
+          /></a>
+          <figcaption>Forest</figcaption>
+        </figure>
+        <figure class="galleryItem" data-aos="flip-left" data-aos-once="false">
+          <a href="#"
+            ><img
+              src="https://images.unsplash.com/photo-1527956041665-d7a1b380c460?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+              alt="City"
+          /></a>
+          <figcaption>City</figcaption>
+        </figure>
+      </div>
+      <iframe
+        width="1275"
+        height="515"
+        src="https://www.youtube.com/embed/S-KTMLb1U0c?si=_5xQ81ACOx4XJ7z_"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
