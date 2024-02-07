@@ -13,7 +13,9 @@ nav {
 .logo {
     text-align: center;
 }
-
+#dark__light{
+display: none;
+}
 .logo img {
     height: 100px;
     width: 290px;
@@ -34,7 +36,12 @@ nav {
     margin: 0 0.7vw;
     color: #000030;
 }
-
+.dark .nav-links li a{
+color: white;
+}
+.dark .nav-links{
+background-color: black;
+}
 .nav-links li a:hover {
     color: #61DAFB;
 }
@@ -71,7 +78,6 @@ nav {
     display: none;
 }
 
-/*Stying for small screens*/
 @media screen and (max-width: 800px) {
     nav {
         position: fixed;
@@ -91,7 +97,7 @@ nav {
 
     .nav-links {
         position: fixed;
-        background: #131418;
+        background: #fff;
         height: 100vh;
         width: 100%;
         flex-direction: column;
@@ -145,6 +151,7 @@ nav {
         opacity: 1;
     }
 }
+
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
