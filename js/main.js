@@ -1,4 +1,12 @@
-  const body = document.body;
+ const loading = document.getElementById("loader");
+
+
+setTimeout(() => {
+  loading.classList.add("loading-none");
+}, 2000);
+
+ 
+ const body = document.body;
       const modeToggle = document.querySelector(".switch");
 
       modeToggle.addEventListener("click", () => {
@@ -31,14 +39,5 @@ galleryItems.forEach(el => {
         openLightBox(el);
     });
 });
-
-
-
-const loading = document.getElementById("loader");
-
-
-setTimeout(() => {
-  loading.classList.add("loading-none");
-}, 2000);
 
 

@@ -211,3 +211,9 @@ function toggleBacktop() {
     backtop.classList.remove('backtop-show')
   }
 }
+ const loading = document.getElementById("loader");
+
+
+setTimeout(() => {
+  loading.classList.add("loading-none");
+}, 2000);
