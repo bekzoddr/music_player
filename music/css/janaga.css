@@ -79,3 +79,11 @@
     bottom: 25px;
     z-index: 10;
 }
+@media (max-width:768px) {
+    .player {
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 193px;
+    }
+}
