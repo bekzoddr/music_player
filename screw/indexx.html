@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="scroll">
+        <h1>Scroll meh</h1>
+        <div class="background">
+          <span>Billie <br /> Eilish</span>
+        </div>
+        <script>
+          const background = document.querySelector(".background");
+
+          document.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+
+            if (scrollY !== 0) {
+              background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`;
+            } else {
+              background.style.backgroundPosition = "";
+            }
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
