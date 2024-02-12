@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-nav {
+.nav {
     height: 6rem;
     width: 100vw;
     background-color: #e5e7ea;
@@ -10,6 +10,57 @@ nav {
     padding-top: 0;
     top: 0;
 }
+   .mobile-bottom-nav {
+       position: fixed;
+       z-index: 1111111;
+       display: none;
+   }
+
+   .cd__main {
+       position: relative;
+       width: 360px !important;
+       height: 720px;
+       border: 2px solid #bbb;
+   }
+
+   i {
+       cursor: pointer;
+   }
+
+   .mobile-bottom-nav {
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       z-index: 1000;
+       will-change: transform;
+       transform: translateZ(0);
+       display: flex;
+       height: 50px;
+       box-shadow: 0 -2px 5px -2px #000030;
+       background-color: #fff;
+   }
+    a{
+    text-decoration: none;
+    color: #111111;
+    }
+   .mobile-bottom-nav__item {
+       flex-grow: 1;
+       text-align: center;
+       font-size: 12px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+   }
+
+   .mobile-bottom-nav__item--active {
+       color: blue;
+   }
+
+   .mobile-bottom-nav__item-content {
+       display: flex;
+       flex-direction: column;
+   }
 .logo {
     text-align: center;
 }
@@ -66,7 +117,6 @@ background-color: black;
     width: 80%;
 }
 
-/*Styling Hamburger Icon*/
 .hamburger div {
     width: 30px;
     height: 3px;
@@ -78,13 +128,17 @@ background-color: black;
 .hamburger {
     display: none;
 }
-
+ .mobile-bottom-nav {
+     display: none !important;
+ }
 @media screen and (max-width: 800px) {
     nav {
         position: fixed;
         z-index: 3;
     }
-
+    .mobile-bottom-nav{
+    display: flex !important;
+    }
     .hamburger {
         display: block;
         position: absolute;

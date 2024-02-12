@@ -1,6 +1,15 @@
 // Designed by: Mauricio Bucardo
 // Original image: https://dribbble.com/shots/6957353-Music-Player-Widget
 "use strict";
+       var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+      navItems.forEach(function (e, i) {
+        e.addEventListener("click", function (e) {
+          navItems.forEach(function (e2, i2) {
+            e2.classList.remove("mobile-bottom-nav__item--active");
+          });
+          this.classList.add("mobile-bottom-nav__item--active");
+        });
+      });
 // add elemnts
 const bgBody = ["#e5e7e9", "#ff4545", "#f8ded3", "#ffc382", "#f5eda6", "#ffcbdc", "#dcf3f3"];
 const body = document.body;

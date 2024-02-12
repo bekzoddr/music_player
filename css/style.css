@@ -1,5 +1,6 @@
 @import url(../css/loading.min.css);
 @import url(../css/header.css);
+@import url(../css/style.css);
 :root {
     font-family: sans-serif;
     font-size: 16px;
@@ -12,6 +13,9 @@ overflow-x: hidden;
 }
 .dark{
 transition: 0.5s;
+}
+.dark   .mobile-bottom-nav__item{
+color: #fff;
 }
 .logo__dark{
 display: none;
@@ -41,8 +45,9 @@ background-color: #000030;
 .dark h1{
     color: white;
 }
-
-.dark .hamburger-lines
+.dark  .mobile-bottom-nav__item--active{
+color: #03A9F4;
+}
 
 .containerr{
 margin-bottom: 50px;
@@ -376,6 +381,7 @@ gap: 50px;
 background: url(../music/images/footer.webp) no-repeat;
 background-position:0cap;
 }
+
 footer{
 padding-top: 50px;
 padding-bottom: 50px;

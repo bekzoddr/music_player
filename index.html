@@ -1,11 +1,45 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  <nav class="mobile-bottom-nav">
+      <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+        <div class="mobile-bottom-nav__item-content">
+          <i class="material-icons">home</i>
+          one
+        </div>
+      </div>
+      <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+          <i class="material-icons">mail</i>
+          two
+        </div>
+      </div>
+      <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+          <i class="material-icons">person</i>
+          three
+        </div>
+      </div>
+      <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+          <i class="material-icons">phone</i>
+          four
+        </div>
+      </div>
+    </nav>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>My music player</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/logos/Screenshot 2024-01-31 212818.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -41,7 +75,7 @@
       <img src="image/home/arrow.svg" alt="arrow" />
     </a>
 
-    <nav>
+    <nav class="nav">
       <div class="logo">
         <a href="#">
           <img
@@ -309,6 +343,7 @@
         </div>
       </section>
     </footer>
+  
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
