@@ -21,212 +21,117 @@ $f-body: 'Open Sans', sans-serif;
     z-index: -100000000000000000000000;
     opacity: 0;
 }
-@mixin centre($axis: "both") {
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: not-allowed;
+    scale: 0.7;
+}
+
+.central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0.5em 1em 1em red,
+        -0.5em 0.5em 1em lime,
+        0.5em -0.5em 1em purple,
+        -0.5em -0.5em 1em yellow;
+}
+
+.external-shadow {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0.5em 0.5em 3em red,
+        -0.5em 0.5em 3em lime,
+        0.5em -0.5em 3em purple,
+        -0.5em -0.5em 3em yellow;
+    z-index: 999;
+    animation: rotate 3s linear infinite;
+    background-color: #212121;
+}
+
+.intern {
     position: absolute;
-
-    @if $axis =="y" {
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-
-    @if $axis =="x" {
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
-
-    @if $axis =="both" {
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-51%, -50%);
-        -moz-transform: translate(-51%, -50%);
-        -ms-transform: translate(-51%, -50%);
-        -o-transform: translate(-51%, -50%);
-        transform: translate(-51%, -50%);
-    }
+    color: white;
+    z-index: 9999;
 }
 
-@mixin font-size($sizeValue: 1.6, $lineHeight: 2.4) {
-    font-size: ($sizeValue * 10) + px;
-    font-size: $sizeValue + rem;
-    line-height: ($lineHeight * 10) + px;
+.intern::before {
+    content: "100%";
+    animation: percent 2s ease-in-out infinite;
 }
 
-@mixin animation($animate...) {
-    $max: length($animate);
-    $animations: '';
-
-    @for $i from 1 through $max {
-        $animations: #{$animations + nth($animate, $i)};
-
-        @if $i < $max {
-            $animations: #{$animations + ", "};
-        }
-    }
-
-    -webkit-animation: $animations;
-    -moz-animation: $animations;
-    -o-animation: $animations;
-    animation: $animations;
-}
-
-@mixin keyframes($animationName) {
-    @-webkit-keyframes #{$animationName} {
-        @content;
-    }
-
-    @-moz-keyframes #{$animationName} {
-        @content;
-    }
-
-    @-o-keyframes #{$animationName} {
-        @content;
-    }
-
-    @keyframes #{$animationName} {
-        @content;
-    }
-}
-
-@include keyframes(outerRotate1) {
+@keyframes rotate {
     0% {
-        transform: translate(-50%, -50%) rotate(0)
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
     }
 
     100% {
-        transform: translate(-50%, -50%) rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 
-@include keyframes(outerRotate2) {
+@keyframes percent {
     0% {
-        transform: translate(-50%, -50%) rotate(0)
+        content: '0%';
     }
 
-    100% {
-        transform: translate(-50%, -50%) rotate(-360deg)
-    }
-}
-
-@include keyframes(textColour) {
-    0% {
-        color: #fff;
+    25% {
+        content: '25%';
     }
 
-    100% {
-        color: #3BB2D0;
-    }
-}
-
-.loading {
-font-family: $f-body;
-}
-
-.e-loadholder {
-    @include centre();
-    width: 240px;
-    height: 240px;
-    border: 5px solid #1B5F70;
-    border-radius: 120px;
-    box-sizing: border-box;
-
-
-    &:after {
-        @include centre;
-        content: " ";
-        display: block;
-        background: #222;
-        transform-origin: center;
-        z-index: 0;
+    33% {
+        content: '33%';
     }
 
-    &:after {
-        width: 100px;
-        height: 200%;
-        @include animation('outerRotate2 30s infinite linear');
+    42% {
+        content: '42%';
     }
 
-    .m-loader {
-        @include centre();
-        width: 200px;
-        height: 200px;
-        color: #888;
-        text-align: center;
-        border: 5px solid lighten(#1B5F70, 15%);
-        border-radius: 100px;
-        box-sizing: border-box;
-        z-index: 20;
-        text-transform: uppercase;
-
-        &:after {
-            @include centre;
-            content: " ";
-            display: block;
-            background: #222;
-            transform-origin: center;
-            z-index: -1;
-        }
-
-        &:after {
-            width: 100px;
-            height: 106%;
-            @include animation('outerRotate1 15s infinite linear');
-        }
-
-        .e-text {
-            @include font-size(1.4, 13);
-            @include centre();
-            @include animation('textColour 1s alternate linear infinite');
-            display: block;
-            width: 140px;
-            height: 140px;
-            text-align: center;
-            border: 5px solid lighten(#1B5F70, 25%);
-            border-radius: 70px;
-            box-sizing: border-box;
-            z-index: 20;
-
-            &:before,
-            &:after {
-                @include centre;
-                content: " ";
-                display: block;
-                background: #222;
-                transform-origin: center;
-                z-index: -1;
-            }
-
-            &:before {
-                width: 110%;
-                height: 40px;
-                @include animation('outerRotate2 3.5s infinite linear');
-            }
-
-            &:after {
-                width: 40px;
-                height: 110%;
-                @include animation('outerRotate1 8s infinite linear');
-            }
-        }
+    51% {
+        content: '51%';
     }
-}
 
-#particleCanvas-White {
-    @include centre();
-    width: 100%;
-    height: 50%;
-    opacity: 0.1;
-}
+    67% {
+        content: '67%';
+    }
 
-#particleCanvas-Blue {
-    @include centre();
-    width: 300px;
-    height: 300px;
+    74% {
+        content: '74%';
+    }
+
+    75% {
+        content: '75%';
+    }
+
+    86% {
+        content: '86%';
+    }
+
+    95% {
+        content: '95%';
+    }
+
+    98% {
+        content: '98%';
+    }
+
+    99% {
+        content: '99%';
+    }
 }

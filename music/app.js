@@ -225,4 +225,4 @@ function toggleBacktop() {
 
 setTimeout(() => {
   loading.classList.add("loading-none");
-}, 2000);
+}, 1500);
